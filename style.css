@@ -25,6 +25,7 @@ body {
   color: #ffcb05;
   padding-left: 50px;
   text-shadow: 2px 2px #3b4cca;
+  padding-bottom: 10px;
 }
 .ball {
   width: 40px;
