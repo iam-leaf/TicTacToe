@@ -20,6 +20,12 @@ const gamePlaywin = [
 cells.forEach(cell => cell.addEventListener("click", handlecellclick))
 resetButton.addEventListener("click", restartGame);
 
+function getPlayerImage(player) {
+  return player === "X"
+    ? "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" // Pikachu
+    : "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png";  // Bulbasaur
+}
+
 function handlecellclick() {
   const index = this.dataset.index;
   if (gameBoard[index] !== "" || !SaklarGame) return;
@@ -33,18 +39,18 @@ function handlecellclick() {
   }
 
   if (checkWinner()) {
-    playerTurn.innerHTML = `player <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png
-" class="pokemon-p"> wins!`
-    SaklarGame = false;
+    const winnerImg = getPlayerImage(currentPlayer);
+  playerTurn.innerHTML = `Player <img src="${winnerImg}" class="pokemon-p"> wins!`;
+  SaklarGame = false;
   } else if (!gameBoard.includes("")) {
     playerTurn.innerHTML = `Draw !`
     SaklarGame = false;
   } else if (currentPlayer === "X") {
   currentPlayer = "O";
-  playerTurn.innerHTML = `Player <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" class="pokemon-p"> turn`;
+  playerTurn.innerHTML = `Player <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" class="pokemon-p"> turn`;
 } else {
   currentPlayer = "X";
-  playerTurn.innerHTML = `Player <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" class="pokemon-p"> turn`;
+  playerTurn.innerHTML = `Player <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" class="pokemon-p"> turn`;
 }
 }
 
