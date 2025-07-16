@@ -41,10 +41,10 @@ function handlecellclick() {
     SaklarGame = false;
   } else if (currentPlayer === "X") {
   currentPlayer = "O";
-  playerTurn.innerHTML = `Player <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" class="pokemon-p"> turn`;
+  playerTurn.innerHTML = `Player <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" class="pokemon-p"> turn`;
 } else {
   currentPlayer = "X";
-  playerTurn.innerHTML = `Player <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" class="pokemon-p"> turn`;
+  playerTurn.innerHTML = `Player <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" class="pokemon-p"> turn`;
 }
 }
 
