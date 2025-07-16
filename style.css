@@ -23,9 +23,8 @@ body {
   font-family: "Pokemon Solid", sans-serif;
   font-size: 45px;
   color: #ffcb05;
+  padding-left: 50px;
   text-shadow: 2px 2px #3b4cca;
-  display: inline-block; /* Supaya ukurannya ngepas */
-  padding-left: 70px;
 }
 .ball {
   width: 40px;
