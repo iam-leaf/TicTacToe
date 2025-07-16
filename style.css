@@ -24,13 +24,14 @@ body {
   font-size: 45px;
   color: #ffcb05;
   text-shadow: 2px 2px #3b4cca;
-  position: relative; /* 💡 Tambahkan ini */
   display: inline-block; /* Supaya ukurannya ngepas */
+  padding-left: 70px;
 }
 .ball {
   width: 40px;
-  position: absolute;
-  top: 50px;
+  position: relative;
+  top: 35%;
+  right: 20px;
 }
 
 .pokemon-titles {
@@ -102,14 +103,15 @@ h3 {
 }
 
 .player-turn {
-    margin: 10px;
     font-family:'Times New Roman', Times, serif;
     font-weight: bold;
+    justify-content: center;
+    display: flex;
+    align-items: center;
 }
 .pokemon-p {
-    position: absolute;
-    top: 458px;
-    padding-left: 15px;
+    position: relative;
+    top: 75.5%;
     width: 5rem;
 }
 
